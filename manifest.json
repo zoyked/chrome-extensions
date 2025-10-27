@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "No Background",
+  "version": "1.0.0",
+  "description": "Снимает фон (background/background-color) на выбранных сайтах",
+  "permissions": ["scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "service_worker.js" },
+  "action": { "default_title": "Toggle No Background" },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://example.com/*"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ]
+}
