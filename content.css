@@ -1,0 +1,17 @@
+/* Агрессивный сброс фонов */
+html, body, main, #main, .main, #root, #app, .app {
+  background: unset !important;
+  background-color: unset !important;
+}
+
+/* Перебиваем инлайн-стили */
+body[style*="background"], main[style*="background"] {
+  background: unset !important;
+  background-color: unset !important;
+}
+
+/* Частые контейнеры */
+*[class*="container"], *[class*="wrapper"] {
+  background: unset !important;
+  background-color: unset !important;
+}
